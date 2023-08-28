@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <model name="table_n_chair">
+      <model name='table'>
+        <pose>0 0 0 0 0 0 0 </pose>
+        <static>1</static>
+        <include>
+          <name>Office Table</name>
+          <uri>model://table</uri>
+        </include>
+      </model>
+      <model name='chair'>
+        <pose>0 0.65 0 0 -0 0</pose>
+        <static>1</static>
+        <include>
+          <name>Chair</name>
+          <uri>model://chair</uri>
+        </include>
+      </model>
+    </model>
+</sdf>

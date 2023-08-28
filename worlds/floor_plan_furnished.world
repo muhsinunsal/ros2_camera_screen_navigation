@@ -1,0 +1,1624 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <world name="default">
+
+    <light name="light_1" type='directional'>
+      <direction>0 1 0.5</direction>
+      <diffuse>204 204 204 255</diffuse>
+      <cast_shadows>0</cast_shadows>
+    </light>
+
+    <light name="light_3" type='directional'>
+      <direction>-1 -1 0.5</direction>
+      <diffuse>204 204 204 255</diffuse>
+      <cast_shadows>0</cast_shadows>
+    </light>
+    <light name="light_4" type='directional'>
+      <direction>0.1 0.1 -0.1</direction>
+      <diffuse>204 204 204 255</diffuse>
+      <cast_shadows>0</cast_shadows>
+    </light>
+    <light name="light_5" type='directional'>
+      <direction>-0.5 0.3 -1</direction>
+      <diffuse>204 204 204 255</diffuse>
+      <cast_shadows>0</cast_shadows>
+    </light>
+    <scene>
+      <shadows>false</shadows>
+    </scene>
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <pose frame=''>-15 10 100 0 1.570792 1.570792</pose>
+        <view_controller>orbit</view_controller>
+        <projection_type>perspective</projection_type>
+      </camera>
+    </gui>
+
+    <physics type="ode">
+      <real_time_update_rate>1000.0</real_time_update_rate>
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <ode>
+        <solver>
+          <type>quick</type>
+          <iters>150</iters>
+          <precon_iters>0</precon_iters>
+          <sor>1.400000</sor>
+          <use_dynamic_moi_rescaling>1</use_dynamic_moi_rescaling>
+        </solver>
+        <constraints>
+          <cfm>0.00001</cfm>
+          <erp>0.2</erp>
+          <contact_max_correcting_vel>2000.000000</contact_max_correcting_vel>
+          <contact_surface_layer>0.01000</contact_surface_layer>
+        </constraints>
+      </ode>
+    </physics>
+    <model name="ground">
+      <static>1</static>
+      <include>
+        <name>Romer Ground Combined Floor Plan</name>
+        <uri>model://floor_0</uri>
+        <pose>0 0 0 0 0 0</pose>
+      </include>
+    </model>
+    <model name="basement">
+      <pose>-37.50 4.37 0 0 0 0</pose>
+      <static>1</static>
+      <include>
+        <name>Romer Basement Combined Floor Plan</name>
+        <uri>model://floor_-1</uri>
+      </include>
+    </model>
+
+    <model name="desk_1">
+      <pose>-12.02 13.31 0 0 0 0</pose>
+      <static>1</static>
+      <include>
+        <name>Desk_Right</name>
+        <uri>model://desk_right</uri>
+      </include>
+    </model>
+
+    <model name="desk_2">
+      <pose>-12.02 12.51 0 0 0 3.141593</pose>
+      <static>1</static>
+      <include>
+        <name>Desk_Left</name>
+        <uri>model://desk_left</uri>
+      </include>
+    </model>
+
+
+    <model name="desk_3">
+      <pose>-11.260586 8 0 0 0 1.570796</pose>
+      <static>1</static>
+      <include>
+        <name>Desk_Right</name>
+        <uri>model://desk_right</uri>
+      </include>
+    </model>
+
+    <model name="desk_4">
+      <pose>-10.459622 8 0 0 0 -1.570793</pose>
+      <static>1</static>
+      <include>
+        <name>Desk_Left</name>
+        <uri>model://desk_left</uri>
+      </include>
+    </model>
+
+    <model name="desk_5">
+      <pose>-7.34 8 0 0 0 1.570796</pose>
+      <static>1</static>
+      <include>
+        <name>Desk_Right</name>
+        <uri>model://desk_right</uri>
+      </include>
+    </model>
+
+    <model name="desk_6">
+      <pose>-6.54 8 0 0 0 -1.570793</pose>
+      <static>1</static>
+      <include>
+        <name>Desk_Left</name>
+        <uri>model://desk_left</uri>
+      </include>
+    </model>
+
+    <model name="desk_7">
+      <pose>-3.63 8 0 0 0 1.570793</pose>
+      <static>1</static>
+      <include>
+        <name>Desk_Right</name>
+        <uri>model://desk_right</uri>
+      </include>
+    </model>
+
+    <model name="desk_8">
+      <pose>-8.055500 12.51 0 0 0 3.141593</pose>
+      <static>1</static>
+      <include>
+        <name>Desk_Left</name>
+        <uri>model://desk_left</uri>
+      </include>
+    </model>
+
+    <model name="desk_9">
+      <pose>-5.284200 13.706704 0 0 0 1.570799</pose>
+      <static>1</static>
+      <include>
+        <name>Desk_Left</name>
+        <uri>model://desk_left</uri>
+      </include>
+    </model>
+
+    <model name="desk_10">
+      <pose>-4.49 13.70 0 0 0 -1.570793</pose>
+      <static>1</static>
+      <include>
+        <name>Desk_Right</name>
+        <uri>model://desk_right</uri>
+      </include>
+    </model>
+    <!-- NEXT ROOM-->
+
+    <model name="desk_11">
+      <pose>-11.26 6.43 0 0 0 1.570796</pose>
+      <static>1</static>
+      <include>
+        <name>Desk_Left</name>
+        <uri>model://desk_left</uri>
+      </include>
+    </model>
+
+    <model name="desk_12">
+      <pose>-10.459622 6.43 0 0 0 -1.570793</pose>
+      <static>1</static>
+      <include>
+        <name>Desk_Right</name>
+        <uri>model://desk_right</uri>
+      </include>
+    </model>
+
+
+    <model name="desk_13">
+      <pose>-7.34 6.43 0 0 0 1.570796</pose>
+      <static>1</static>
+      <include>
+        <name>Desk_Left</name>
+        <uri>model://desk_left</uri>
+      </include>
+    </model>
+
+    <model name="desk_14">
+      <pose>-6.54 6.43 0 0 0 -1.570793</pose>
+      <static>1</static>
+      <include>
+        <name>Desk_Right</name>
+        <uri>model://desk_right</uri>
+      </include>
+    </model>
+
+    <model name="desk_15">
+      <pose>-3.63 6.43 0 0 0 1.570793</pose>
+      <static>1</static>
+      <include>
+        <name>Table</name>
+        <uri>model://table</uri>
+      </include>
+    </model>
+
+
+    <model name="desk_16">
+      <pose>-12.02 2.21 0 0 0 0</pose>
+      <static>1</static>
+      <include>
+        <name>Desk_Right</name>
+        <uri>model://desk_right</uri>
+      </include>
+    </model>
+
+    <model name="desk_17">
+      <pose>-12.02 1.42 0 0 0 3.141593</pose>
+      <static>1</static>
+      <include>
+        <name>Desk_Left</name>
+        <uri>model://desk_left</uri>
+      </include>
+    </model>
+
+
+    <model name="desk_18">
+      <pose>-6.95 0.77 0 0 0 1.570796</pose>
+      <static>1</static>
+      <include>
+        <name>Desk_Right</name>
+        <uri>model://desk_right</uri>
+      </include>
+    </model>
+
+    <model name="desk_19">
+      <pose>-6.16 0.77 0 0 0 -1.570793</pose>
+      <static>1</static>
+      <include>
+        <name>Desk_Left</name>
+        <uri>model://desk_left</uri>
+      </include>
+    </model>
+    <!-- NEXT ROOM-->
+    <model name="triple_desk_1">
+      <pose>-12.38 -1.42 0 0 0 -1.570802</pose>
+      <static>1</static>
+      <include>
+        <name>Table</name>
+        <uri>model://table</uri>
+      </include>
+      <include>
+        <name>Chair_1</name>
+        <uri>model://chair</uri>
+        <pose>-0.3 0.61 0 0 0 0</pose>
+      </include>
+      <include>
+        <name>Chair_2</name>
+        <uri>model://chair</uri>
+        <pose>0.4 0.61 0 0 0 0</pose>
+      </include>
+    </model>
+
+    <model name="triple_desk_2">
+      <pose>-12.38 -2.91 0 0 0 -1.570802</pose>
+      <static>1</static>
+      <include>
+        <name>Table</name>
+        <uri>model://table</uri>
+      </include>
+      <include>
+        <name>Chair_1</name>
+        <uri>model://chair</uri>
+        <pose>-0.3 0.61 0 0 0 0</pose>
+      </include>
+      <include>
+        <name>Chair_2</name>
+        <uri>model://chair</uri>
+        <pose>0.4 0.61 0 0 0 0</pose>
+      </include>
+    </model>
+
+    <model name="triple_desk_3">
+      <pose>-12.38 -4.41 0 0 0 -1.570802</pose>
+      <static>1</static>
+      <include>
+        <name>Table</name>
+        <uri>model://table</uri>
+      </include>
+      <include>
+        <name>Chair_1</name>
+        <uri>model://chair</uri>
+        <pose>-0.3 0.61 0 0 0 0</pose>
+      </include>
+      <include>
+        <name>Chair_2</name>
+        <uri>model://chair</uri>
+        <pose>0.4 0.61 0 0 0 0</pose>
+      </include>
+    </model>
+
+    <model name="triple_desk_4">
+      <pose>-8.30 -1.79 0 0 0 1.570802</pose>
+      <static>1</static>
+      <include>
+        <name>Table</name>
+        <uri>model://table</uri>
+      </include>
+      <include>
+        <name>Chair_1</name>
+        <uri>model://chair</uri>
+        <pose>-0.3 0.61 0 0 0 0</pose>
+      </include>
+      <include>
+        <name>Chair_2</name>
+        <uri>model://chair</uri>
+        <pose>0.4 0.61 0 0 0 0</pose>
+      </include>
+    </model>
+
+    <model name="triple_desk_5">
+      <pose>-8.30 -3.20 0 0 0 1.570802</pose>
+      <static>1</static>
+      <include>
+        <name>Table</name>
+        <uri>model://table</uri>
+      </include>
+      <include>
+        <name>Chair_1</name>
+        <uri>model://chair</uri>
+        <pose>-0.3 0.61 0 0 0 0</pose>
+      </include>
+      <include>
+        <name>Chair_2</name>
+        <uri>model://chair</uri>
+        <pose>0.4 0.61 0 0 0 0</pose>
+      </include>
+    </model>
+
+
+    <model name="triple_desk_6">
+      <pose>-11.48 -7.37 0 0 0 0</pose>
+      <static>1</static>
+      <include>
+        <name>Table</name>
+        <uri>model://table</uri>
+      </include>
+      <include>
+        <name>Chair_1</name>
+        <uri>model://chair</uri>
+        <pose>-0.3 0.61 0 0 0 0</pose>
+      </include>
+      <include>
+        <name>Chair_2</name>
+        <uri>model://chair</uri>
+        <pose>0.4 0.61 0 0 0 0</pose>
+      </include>
+    </model>
+
+    <model name="triple_desk_7">
+      <pose>-10 -7.37 0 0 0 0</pose>
+      <static>1</static>
+      <include>
+        <name>Table</name>
+        <uri>model://table</uri>
+      </include>
+      <include>
+        <name>Chair_1</name>
+        <uri>model://chair</uri>
+        <pose>-0.3 0.61 0 0 0 0</pose>
+      </include>
+      <include>
+        <name>Chair_2</name>
+        <uri>model://chair</uri>
+        <pose>0.4 0.61 0 0 0 0</pose>
+      </include>
+    </model>
+
+
+    <model name="triple_desk_8">
+      <pose>-8.50 -7.37 0 0 0 0</pose>
+      <static>1</static>
+      <include>
+        <name>Table</name>
+        <uri>model://table</uri>
+      </include>
+      <include>
+        <name>Chair_1</name>
+        <uri>model://chair</uri>
+        <pose>-0.3 0.61 0 0 0 0</pose>
+      </include>
+      <include>
+        <name>Chair_2</name>
+        <uri>model://chair</uri>
+        <pose>0.4 0.61 0 0 0 0</pose>
+      </include>
+    </model>
+
+    <model name="desk_20">
+      <pose>-4.32 -3.02 0 0 0 -1.570793</pose>
+      <static>1</static>
+      <include>
+        <name>Desk_Left</name>
+        <uri>model://desk_left</uri>
+      </include>
+    </model>
+
+    <model name="meeting_table">
+      <pose>-7.40 -10.18 0 0 0 -1.570793</pose>
+      <static>1</static>
+      <include>
+        <name>Table_1</name>
+        <uri>model://table</uri>
+        <pose>0 0 0 0 0 0 0</pose>
+      </include>
+      <include>
+        <name>Table_2</name>
+        <uri>model://table</uri>
+        <pose>0 0.8 0 0 0</pose>
+      </include>
+      <include>
+        <name>Table_3</name>
+        <uri>model://table</uri>
+        <pose>1.5 0 0 0 0 0</pose>
+      </include>
+      <include>
+        <name>Table_4</name>
+        <uri>model://table</uri>
+        <pose>1.5 0.8 0 0 0 0</pose>
+      </include>
+
+
+      <include>
+        <name>Chair_1</name>
+        <uri>model://chair</uri>
+        <pose>-0.86 0.77 0 0 0 1.570796</pose>
+      </include>
+      <include>
+        <name>Chair_2</name>
+        <uri>model://chair</uri>
+        <pose>-0.86 0 0 0 0 1.570796</pose>
+      </include>
+      <include>
+        <name>Chair_3</name>
+        <uri>model://chair</uri>
+        <pose>-0.34 -0.5 0 0 0 -3.141590</pose>
+      </include>
+      <include>
+        <name>Chair_4</name>
+        <uri>model://chair</uri>
+        <pose>0.42 -0.5 0 0 0 -3.141590</pose>
+      </include>
+      <include>
+        <name>Chair_5</name>
+        <uri>model://chair</uri>
+        <pose>1.24 -0.5 0 0 0 -3.141590</pose>
+      </include>
+      <include>
+        <name>Chair_6</name>
+        <uri>model://chair</uri>
+        <pose>2.03 -0.5 0 0 0 -3.141590</pose>
+      </include>
+      <include>
+        <name>Chair_7</name>
+        <uri>model://chair</uri>
+        <pose>-0.34 1.28 0 0 0 0</pose>
+      </include>
+      <include>
+        <name>Chair_8</name>
+        <uri>model://chair</uri>
+        <pose>0.42 1.28 0 0 0 0</pose>
+      </include>
+      <include>
+        <name>Chair_9</name>
+        <uri>model://chair</uri>
+        <pose>1.24 1.28 0 0 0 0</pose>
+      </include>
+      <include>
+        <name>Chair_10</name>
+        <uri>model://chair</uri>
+        <pose>2.03 1.28 0 0 0</pose>
+      </include>
+      <include>
+        <name>Chair_11</name>
+        <uri>model://chair</uri>
+        <pose>2.4 0 0 0 0 -1.570793</pose>
+      </include>
+      <include>
+        <name>Chair_12</name>
+        <uri>model://chair</uri>
+        <pose>2.4 0.77 0 0 0 -1.570793</pose>
+      </include>
+    </model>
+    <!-- NEXT ROOM-->
+
+    <model name="table_n_chair_1">
+      <pose>-8.4 -13.88 0 0 0 0 3.141593 </pose>
+      <static>1</static>
+      <include>
+        <name>Office Table</name>
+        <uri>model://table_n_chair</uri>
+      </include>
+    </model>
+
+    <model name="table_n_chair_2">
+      <pose>-5.87 -14.25 0 0 0 1.570796 </pose>
+      <static>1</static>
+      <include>
+        <name>Office Table</name>
+        <uri>model://table_n_chair</uri>
+      </include>
+    </model>
+    <model name="table_n_chair_3">
+      <pose>-5.07 -14.25 0 0 0 -1.570796 </pose>
+      <static>1</static>
+      <include>
+        <name>Office Table</name>
+        <uri>model://table_n_chair</uri>
+      </include>
+    </model>
+
+    <!-- NEXT ROOM-->
+    <model name="table_n_twoChair_1">
+      <pose>-2.21 -15.16 0 0 0 0</pose>
+      <static>1</static>
+      <include>
+        <name>Desk_Right</name>
+        <uri>model://table_n_twoChair</uri>
+      </include>
+    </model>
+    <!-- NEXT ROOM-->
+
+    <model name="desk_21">
+      <pose>-0.45 -13.2 0 0 0 0</pose>
+      <static>1</static>
+      <include>
+        <name>Desk_Right</name>
+        <uri>model://desk_right</uri>
+      </include>
+    </model>
+
+    <model name="desk_22">
+      <pose>-0.45 -14 0 0 0 -3.141589</pose>
+      <static>1</static>
+      <include>
+        <name>Desk_Left</name>
+        <uri>model://desk_left</uri>
+      </include>
+    </model>
+
+    <model name="desk_23">
+      <pose>2.28 -10.57 0 0 0 1.570796</pose>
+      <static>1</static>
+      <include>
+        <name>Desk_Left</name>
+        <uri>model://desk_left</uri>
+      </include>
+    </model>
+
+    <model name="table_n_chair_4">
+      <pose>2.28 -12.05 0 0 0 1.570796 </pose>
+      <static>1</static>
+      <include>
+        <name>Office Table</name>
+        <uri>model://table_n_chair</uri>
+      </include>
+    </model>
+
+    <model name="table_n_chair_5">
+      <pose>2.28 -13.54 0 0 0 1.570796 </pose>
+      <static>1</static>
+      <include>
+        <name>Office Table</name>
+        <uri>model://table_n_chair</uri>
+      </include>
+    </model>
+    <!-- NEXT ROOM-->
+
+
+    <model name="table_n_twoChair_2">
+      <pose>1.4 -7.91 0 0 0 3.141593</pose>
+      <static>1</static>
+      <include>
+        <name>Table and Two Chair</name>
+        <uri>model://table_n_twoChair</uri>
+      </include>
+    </model>
+
+    <model name="table_n_chair_6">
+      <pose>0.5 -6.36 0 0 0 1.570796 </pose>
+      <static>1</static>
+      <include>
+        <name>Office Table</name>
+        <uri>model://table_n_chair</uri>
+      </include>
+    </model>
+    <!-- NEXT ROOM-->
+    <model name="table_n_chair_7">
+      <pose>3.22 -5.56 0 0 0 -1.570796 </pose>
+      <static>1</static>
+      <include>
+        <name>Office Table</name>
+        <uri>model://table_n_chair</uri>
+      </include>
+    </model>
+    <model name="table_n_chair_8">
+      <pose>3.22 -7.06 0 0 0 -1.570796 </pose>
+      <static>1</static>
+      <include>
+        <name>Office Table</name>
+        <uri>model://table_n_chair</uri>
+      </include>
+    </model>
+    <model name="table_n_chair_9">
+      <pose>3.22 -8.56 0 0 0 -1.570796 </pose>
+      <static>1</static>
+      <include>
+        <name>Office Table</name>
+        <uri>model://table_n_chair</uri>
+      </include>
+    </model>
+
+    <model name="desk_24">
+      <pose>6.17 -5.6 0 0 0 1.570796</pose>
+      <static>1</static>
+      <include>
+        <name>Desk_Left</name>
+        <uri>model://desk_left</uri>
+      </include>
+    </model>
+
+    <model name="desk_25">
+      <pose>6.96 -5.6 0 0 0 -1.570796</pose>
+      <static>1</static>
+      <include>
+        <name>Desk_Right</name>
+        <uri>model://desk_right</uri>
+      </include>
+    </model>
+    <!-- NEXT ROOM-->
+
+    <model name="desk_26">
+      <pose>3.94 -10.58 0 0 0 1.570796</pose>
+      <static>1</static>
+      <include>
+        <name>Desk_Left</name>
+        <uri>model://desk_left</uri>
+      </include>
+    </model>
+
+    <model name="desk_27">
+      <pose>4.73 -10.58 0 0 0 -1.570796</pose>
+      <static>1</static>
+      <include>
+        <name>Desk_Right</name>
+        <uri>model://desk_right</uri>
+      </include>
+    </model>
+
+    <model name="table_1">
+      <pose>4.34 -11.72 0 0 0 0</pose>
+      <static>1</static>
+      <include>
+        <name>Table</name>
+        <uri>model://table</uri>
+      </include>
+    </model>
+
+
+    <model name="desk_28">
+      <pose>4.73 -14.8 0 0 0 -1.570796</pose>
+      <static>1</static>
+      <include>
+        <name>Desk_Left</name>
+        <uri>model://desk_left</uri>
+      </include>
+    </model>
+    <model name="desk_29">
+      <pose>3.94 -14.8 0 0 0 1.570796</pose>
+      <static>1</static>
+      <include>
+        <name>Desk_Right</name>
+        <uri>model://desk_right</uri>
+      </include>
+    </model>
+
+    <model name="table_2">
+      <pose>4.34 -13.65 0 0 0 0</pose>
+      <static>1</static>
+      <include>
+        <name>Table</name>
+        <uri>model://table</uri>
+      </include>
+    </model>
+
+    <model name="table_n_twoChair_3">
+      <pose>7.66 -12.7 0 0 0 1.570796</pose>
+      <static>1</static>
+      <include>
+        <name>Table and Two Chair</name>
+        <uri>model://table_n_twoChair</uri>
+      </include>
+    </model>
+
+    <model name="table_n_twoChair_4">
+      <pose>7.66 -14.2 0 0 0 1.570796</pose>
+      <static>1</static>
+      <include>
+        <name>Table and Two Chair</name>
+        <uri>model://table_n_twoChair</uri>
+      </include>
+    </model>
+
+    <!-- NEXT ROOM-->
+    <model name="table_n_chair_10">
+      <pose>6.49 7.82 0 0 0 -1.570796 </pose>
+      <static>1</static>
+      <include>
+        <name>Office Table</name>
+        <uri>model://table_n_chair</uri>
+      </include>
+    </model>
+
+    <!-- NEXT ROOM-->
+    <model name="table_n_twoChair_5">
+      <pose>4.84 11.79 0 0 0 0</pose>
+      <static>1</static>
+      <include>
+        <name>Table and Two Chair</name>
+        <uri>model://table_n_twoChair</uri>
+      </include>
+    </model>
+
+    <model name="table_n_twoChair_6">
+      <pose>4.84 11.02 0 0 0 -3.141589</pose>
+      <static>1</static>
+      <include>
+        <name>Table and Two Chair</name>
+        <uri>model://table_n_twoChair</uri>
+      </include>
+    </model>
+
+    <!-- NEXT ROOM-->
+
+
+    <model name="chair_1">
+      <pose>11.33 12.23 0 0 0 0</pose>
+      <static>1</static>
+      <include>
+        <name>Chair</name>
+        <uri>model://chair</uri>
+      </include>
+    </model>
+
+    <model name="table_n_twoChair_7">
+      <pose>10.93 11.48 0 0 0 1.570796</pose>
+      <static>1</static>
+      <include>
+        <name>Table and Two Chair</name>
+        <uri>model://table_n_twoChair</uri>
+      </include>
+    </model>
+
+    <model name="table_n_twoChair_8">
+      <pose>11.73 11.48 0 0 0 -1.570796</pose>
+      <static>1</static>
+      <include>
+        <name>Table and Two Chair</name>
+        <uri>model://table_n_twoChair</uri>
+      </include>
+    </model>
+
+    <model name="table_n_twoChair_9">
+      <pose>10.93 9.98 0 0 0 1.570796</pose>
+      <static>1</static>
+      <include>
+        <name>Table and Two Chair</name>
+        <uri>model://table_n_twoChair</uri>
+      </include>
+    </model>
+
+    <model name="table_n_twoChair_10">
+      <pose>11.73 9.98 0 0 0 -1.570796</pose>
+      <static>1</static>
+      <include>
+        <name>Table and Two Chair</name>
+        <uri>model://table_n_twoChair</uri>
+      </include>
+    </model>
+    <model name="chair_2">
+      <pose>11.34 9.18 0 0 0 3.141593</pose>
+      <static>1</static>
+      <include>
+        <name>Chair</name>
+        <uri>model://chair</uri>
+      </include>
+    </model>
+
+
+    <!-- NEXT ROOM-->
+
+    <model name="desk_30">
+      <pose>12.03 5.60 0 0 0 0</pose>
+      <static>1</static>
+      <include>
+        <name>Desk_Left</name>
+        <uri>model://desk_left</uri>
+      </include>
+    </model>
+    <model name="desk_31">
+      <pose>12.03 4.80 0 0 0 3.141589</pose>
+      <static>1</static>
+      <include>
+        <name>Desk_Right</name>
+        <uri>model://desk_right</uri>
+      </include>
+    </model>
+
+    <!-- NEXT ROOM-->
+
+    <model name="desk_32">
+      <pose>12.03 2.28 0 0 0 0</pose>
+      <static>1</static>
+      <include>
+        <name>Desk_Left</name>
+        <uri>model://desk_left</uri>
+      </include>
+    </model>
+    <model name="desk_33">
+      <pose>12.03 1.50 0 0 0 3.141589</pose>
+      <static>1</static>
+      <include>
+        <name>Desk_Right</name>
+        <uri>model://desk_right</uri>
+      </include>
+    </model>
+
+
+    <!-- NEXT ROOM-->
+
+    <model name="desk_34">
+      <pose>12.03 -1.94 0 0 0 0</pose>
+      <static>1</static>
+      <include>
+        <name>Desk_Left</name>
+        <uri>model://desk_left</uri>
+      </include>
+    </model>
+    <model name="desk_35">
+      <pose>12.03 -2.74 0 0 0 3.141589</pose>
+      <static>1</static>
+      <include>
+        <name>Desk_Right</name>
+        <uri>model://desk_right</uri>
+      </include>
+    </model>
+
+    <!-- NEXT ROOM-->
+
+    <model name="desk_36">
+      <pose>12.03 -5.41 0 0 0 0</pose>
+      <static>1</static>
+      <include>
+        <name>Desk_Left</name>
+        <uri>model://desk_left</uri>
+      </include>
+    </model>
+    <model name="desk_37">
+      <pose>12.03 -6.20 0 0 0 3.141589</pose>
+      <static>1</static>
+      <include>
+        <name>Desk_Right</name>
+        <uri>model://desk_right</uri>
+      </include>
+    </model>
+
+
+    <model name="desk_39">
+      <pose>11.30 -10.49 0 0 0 0</pose>
+      <static>1</static>
+      <include>
+        <name>Desk_Left</name>
+        <uri>model://desk_left</uri>
+      </include>
+    </model>
+
+    <model name="table_3">
+      <pose>11.30 -14.13 0 0 0 0</pose>
+      <static>1</static>
+      <include>
+        <name>Table</name>
+        <uri>model://table</uri>
+      </include>
+    </model>
+
+    <model name="chair_3">
+      <pose>11.30 -13.55 0 0 0 0</pose>
+      <static>1</static>
+      <include>
+        <name>Chair</name>
+        <uri>model://chair</uri>
+      </include>
+    </model>
+
+    <model name="chair_4">
+      <pose>12.24 -14.1 0 0 0 -1.570796</pose>
+      <static>1</static>
+      <include>
+        <name>Chair</name>
+        <uri>model://chair</uri>
+      </include>
+    </model>
+
+    <model name="chair_5">
+      <pose>11.30 -14.67 0 0 0 3.141593</pose>
+      <static>1</static>
+      <include>
+        <name>Chair</name>
+        <uri>model://chair</uri>
+      </include>
+    </model>
+
+    <model name="chair_6">
+      <pose>10.41 -14.15 0 0 0 1.570796</pose>
+      <static>1</static>
+      <include>
+        <name>Chair</name>
+        <uri>model://chair</uri>
+      </include>
+    </model>
+    <!-- GROUND FLOOR-->
+    <model name="double_table_1">
+      <pose>-55.78 23.38 0 0 0 -1.570796 </pose>
+      <model name="Table_5">
+        <pose>0 0 0 0 0 0</pose>
+        <include>
+          <name>Table</name>
+          <uri>model://table</uri>
+        </include>
+      </model>
+      <model name="Table_7">
+        <pose>0 -0.8 0 0 0 0</pose>
+        <include>
+          <name>Table</name>
+          <uri>model://table</uri>
+        </include>
+      </model>
+    </model>
+    <model name="tripple_table_1">
+      <pose>-52.03 22.76 0 0 0 0 </pose>
+      <model name="Table_8">
+        <pose>0 0 0 0 0 -1.570796</pose>
+        <include>
+          <name>Table</name>
+          <uri>model://table</uri>
+        </include>
+      </model>
+      <model name="Table_9">
+        <pose>-0.8 0 0 0 0 -1.570796</pose>
+        <include>
+          <name>Table</name>
+          <uri>model://table</uri>
+        </include>
+      </model>
+      <model name="Table_10">
+        <pose>-1.6 0 0 0 0 -1.570796</pose>
+        <include>
+          <name>Table</name>
+          <uri>model://table</uri>
+        </include>
+      </model>
+    </model>
+
+    <model name="table_7">
+      <pose>-49.41 24.35 0 0 0 0</pose>
+      <static>1</static>
+      <include>
+        <name>Table</name>
+        <uri>model://table</uri>
+      </include>
+    </model>
+
+    <model name="table_8">
+      <pose>-46.94 23.95 0 0 0 -1.570796</pose>
+      <static>1</static>
+      <include>
+        <name>Table</name>
+        <uri>model://table</uri>
+      </include>
+    </model>
+
+    <model name="table_9">
+      <pose>-55.79 19.45 0 0 0 -1.570796</pose>
+      <static>1</static>
+      <include>
+        <name>Table</name>
+        <uri>model://table</uri>
+      </include>
+    </model>
+
+
+    <model name="table_10">
+      <pose>-52.58 20.50 0 0 0 0</pose>
+      <static>1</static>
+      <include>
+        <name>Table</name>
+        <uri>model://table</uri>
+      </include>
+    </model>
+
+
+    <model name="table_11">
+      <pose>-52.58 18.76 0 0 0 0</pose>
+      <static>1</static>
+      <include>
+        <name>Table</name>
+        <uri>model://table</uri>
+      </include>
+    </model>
+
+    <model name="table_12">
+      <pose>-49.37 21.75 0 0 0 -1.570801</pose>
+      <static>1</static>
+      <include>
+        <name>Table</name>
+        <uri>model://table</uri>
+      </include>
+    </model>
+
+    <model name="table_13">
+      <pose>-49.37 19.62 0 0 0 -1.570801</pose>
+      <static>1</static>
+      <include>
+        <name>Table</name>
+        <uri>model://table</uri>
+      </include>
+    </model>
+    <!-- NEXT ROOM-->
+
+    <model name="table_n_chair_11">
+      <pose>-56.38 14.36 0 0 0 -1.570796 </pose>
+      <static>1</static>
+      <include>
+        <name>Office Table</name>
+        <uri>model://table_n_chair</uri>
+      </include>
+    </model>
+
+    <model name="table_n_chair_12">
+      <pose>-56.38 12.870 0 0 0 -1.570796 </pose>
+      <static>1</static>
+      <include>
+        <name>Office Table</name>
+        <uri>model://table_n_chair</uri>
+      </include>
+    </model>
+
+    <model name="table_n_chair_13">
+      <pose>-56.38 11.38 0 0 0 -1.570796 </pose>
+      <static>1</static>
+      <include>
+        <name>Office Table</name>
+        <uri>model://table_n_chair</uri>
+      </include>
+    </model>
+
+    <model name="table_n_chair_14">
+      <pose>-56.38 9.88 0 0 0 -1.570796 </pose>
+      <static>1</static>
+      <include>
+        <name>Office Table</name>
+        <uri>model://table_n_chair</uri>
+      </include>
+    </model>
+
+    <model name="table_4">
+      <pose>-52.42 15.80 0 0 0 0</pose>
+
+      <static>1</static>
+      <include>
+        <name>Table</name>
+        <uri>model://table</uri>
+      </include>
+    </model>
+
+    <model name="table_5">
+      <pose>-53.92 15.80 0 0 0 0</pose>
+
+      <static>1</static>
+      <include>
+        <name>Table</name>
+        <uri>model://table</uri>
+      </include>
+    </model>
+
+    <model name="table_6">
+      <pose>-55.41 15.80 0 0 0 0</pose>
+
+      <static>1</static>
+      <include>
+        <name>Table</name>
+        <uri>model://table</uri>
+      </include>
+    </model>
+
+    <model name="table_n_chair_15">
+      <pose>-50.93 15.81 0 0 0 3.141593</pose>
+
+      <static>1</static>
+      <include>
+        <name>Table and Chair</name>
+        <uri>model://table_n_chair</uri>
+      </include>
+    </model>
+
+    <model name="table_n_chair_16">
+      <pose>-52.65 11.7 0 0 0 -3.141589</pose>
+      <static>1</static>
+      <include>
+        <name>Table and Chair</name>
+        <uri>model://table_n_chair</uri>
+      </include>
+    </model>
+
+    <model name="table_n_chair_17">
+      <pose>-51.15 11.7 0 0 0 -3.141589</pose>
+      <static>1</static>
+      <include>
+        <name>Table and Chair</name>
+        <uri>model://table_n_chair</uri>
+      </include>
+    </model>
+
+    <model name="chair_7">
+      <pose>-52.65 12.38 0 0 0 0</pose>
+      <static>1</static>
+      <include>
+        <name>Chair</name>
+        <uri>model://chair</uri>
+      </include>
+    </model>
+
+    <model name="chair_8">
+      <pose>-51.14 12.38 0 0 0</pose>
+      <static>1</static>
+      <include>
+        <name>Chair</name>
+        <uri>model://chair</uri>
+      </include>
+    </model>
+
+
+    <model name="table_n_chair_18">
+
+      <pose>-55.40 7.54 0 0 0 0</pose>
+
+      <static>1</static>
+      <include>
+        <name>Table and Chair</name>
+        <uri>model://table_n_chair</uri>
+      </include>
+    </model>
+
+
+    <model name="table_n_chair_19">
+      <pose>-53.91 7.54 0 0 0 </pose>
+      <static>1</static>
+      <include>
+        <name>Table and Chair</name>
+        <uri>model://table_n_chair</uri>
+      </include>
+    </model>
+
+    <model name="table_n_chair_20">
+      <pose>-52.41 7.54 0 0 0 0</pose>
+
+      <static>1</static>
+      <include>
+        <name>Table and Chair</name>
+        <uri>model://table_n_chair</uri>
+      </include>
+    </model>
+
+    <model name="table_n_chair_21">
+      <pose>-50.92 7.54 0 0 0 </pose>
+      <static>1</static>
+      <include>
+        <name>Table and Chair</name>
+        <uri>model://table_n_chair</uri>
+      </include>
+    </model>
+
+    <model name="table_n_chair_22">
+      <pose>-49.42 7.54 0 0 0 </pose>
+      <static>1</static>
+      <include>
+        <name>Table and Chair</name>
+        <uri>model://table_n_chair</uri>
+      </include>
+    </model>
+    <!-- NEXT ROOM-->
+    <model name="desk_40">
+      <pose>-42.48 21.34 0 0 0 1.570799</pose>
+      <static>1</static>
+      <include>
+        <name>Desk_Left</name>
+        <uri>model://desk_left</uri>
+      </include>
+    </model>
+
+    <model name="desk_41">
+      <pose>-41.68 21.34 0 0 0 -1.570799</pose>
+      <static>1</static>
+      <include>
+        <name>Desk_Right</name>
+        <uri>model://desk_right</uri>
+      </include>
+    </model>
+
+
+    <model name="desk_42">
+      <pose>-43.31 17.917730 0 0 0 0</pose>
+
+      <static>1</static>
+      <include>
+        <name>Desk_Right</name>
+        <uri>model://desk_right</uri>
+      </include>
+    </model>
+
+    <model name="desk_43">
+      <pose>-43.31 17.12 0 0 0 3.141593</pose>
+
+      <static>1</static>
+      <include>
+        <name>Desk_Left</name>
+        <uri>model://desk_left</uri>
+      </include>
+    </model>
+    <!-- NEXT ROOM-->
+    <model name="table_n_chair_23">
+      <pose>-37.86 21.36 0 0 0 1.570791</pose>
+      <static>1</static>
+      <include>
+        <name>Office Table</name>
+        <uri>model://table_n_chair</uri>
+      </include>
+    </model>
+
+
+    <model name="table_n_chair_24">
+      <pose>-37.07 21.36 0 0 0 -1.570802</pose>
+      <static>1</static>
+      <include>
+        <name>Office Table</name>
+        <uri>model://table_n_chair</uri>
+      </include>
+    </model>
+
+
+    <model name="table_n_chair_25">
+      <pose>-37.86 19.86 0 0 0 1.570802</pose>
+      <static>1</static>
+      <include>
+        <name>Office Table</name>
+        <uri>model://table_n_chair</uri>
+      </include>
+    </model>
+
+    <model name="table_n_chair_26">
+      <pose>-37.06 19.86 0 0 0 -1.570802</pose>
+      <static>1</static>
+      <include>
+        <name>Office Table</name>
+        <uri>model://table_n_chair</uri>
+      </include>
+    </model>
+
+    <model name="table_n_chair_27">
+      <pose>-36.40 16.46 0 0 0 0</pose>
+      <static>1</static>
+      <include>
+        <name>Office Table</name>
+        <uri>model://table_n_chair</uri>
+      </include>
+    </model>
+
+    <model name="table_14">
+      <pose>-34.91 16.46 0 0 0 0</pose>
+      <static>1</static>
+      <include>
+        <name>Table</name>
+        <uri>model://table</uri>
+      </include>
+    </model>
+
+    <model name="table_n_chair_28">
+      <pose>-34.57 17.6 0 0 0 1.570802</pose>
+      <static>1</static>
+      <include>
+        <name>Office Table</name>
+        <uri>model://table_n_chair</uri>
+      </include>
+    </model>
+
+    <model name="table_n_chair_29">
+      <pose>-34.57 19.06 0 0 0 1.570802</pose>
+      <static>1</static>
+      <include>
+        <name>Office Table</name>
+        <uri>model://table_n_chair</uri>
+      </include>
+    </model>
+
+    <model name="table_n_chair_30">
+      <pose>-34.573700 20.56 0 0 0 1.570802</pose>
+      <static>1</static>
+      <include>
+        <name>Office Table</name>
+        <uri>model://table_n_chair</uri>
+      </include>
+    </model>
+    <!-- NEXT ROOM-->
+
+
+    <model name="desk_44">
+      <pose>-40.68 3.62 0 0 0 0</pose>
+      <static>1</static>
+      <include>
+        <name>Desk_Left</name>
+        <uri>model://desk_left</uri>
+      </include>
+    </model>
+
+    <model name="desk_45">
+      <pose>-39.54 3.97 0 0 0 -1.570796</pose>
+      <static>1</static>
+      <include>
+        <name>Desk_Right</name>
+        <uri>model://desk_right</uri>
+      </include>
+    </model>
+
+
+    <model name="desk_46">
+      <pose>-37.26 3.98 0 0 0 1.570796</pose>
+      <static>1</static>
+      <include>
+        <name>Desk_Left</name>
+        <uri>model://desk_left</uri>
+      </include>
+    </model>
+
+    <model name="desk_47">
+      <pose>-36.11 3.62 0 0 0 0</pose>
+      <static>1</static>
+      <include>
+        <name>Desk_Right</name>
+        <uri>model://desk_right</uri>
+      </include>
+    </model>
+
+    <model name="desk_48">
+      <pose>-35.36 -1.50 0 0 0 -1.570796</pose>
+      <static>1</static>
+      <include>
+        <name>Desk_Left</name>
+        <uri>model://desk_left</uri>
+      </include>
+    </model>
+
+    <model name="desk_49">
+      <pose>-36.15 -1.50 0 0 0 1.570796</pose>
+      <static>1</static>
+      <include>
+        <name>Desk_Right</name>
+        <uri>model://desk_right</uri>
+      </include>
+    </model>
+
+    <!-- NEXT ROOM-->
+
+    <!-- NEXT ROOM-->
+
+    <!-- NEXT ROOM-->
+
+    <model name="table_n_chair_31">
+      <pose>-29.94 13.36 0 0 0 1.570801</pose>
+      <static>1</static>
+      <include>
+        <name>Office Table</name>
+        <uri>model://table_n_chair</uri>
+      </include>
+    </model>
+
+    <model name="table_n_twoChair_11">
+      <pose>-29.91 9.63 0 0 0 3.141591</pose>
+      <static>1</static>
+      <include>
+        <name>Desk_Right</name>
+        <uri>model://table_n_twoChair</uri>
+      </include>
+    </model>
+
+    <model name="table_n_twoChair_12">
+      <pose>-28.42 9.63 0 0 0 3.141591</pose>
+      <static>1</static>
+      <include>
+        <name>Desk with two chair</name>
+        <uri>model://table_n_twoChair</uri>
+      </include>
+    </model>
+
+    <model name="table_n_twoChair_13">
+      <pose>-26.93 9.63 0 0 0 3.141591</pose>
+      <static>1</static>
+      <include>
+        <name>Desk with two chair</name>
+        <uri>model://table_n_twoChair</uri>
+      </include>
+    </model>
+
+    <model name="table_n_twoChair_14">
+      <pose>-25.43 9.63 0 0 0 3.141591</pose>
+      <static>1</static>
+      <include>
+        <name>Desk with two chair</name>
+        <uri>model://table_n_twoChair</uri>
+      </include>
+    </model>
+
+    <model name="table_n_twoChair_15">
+      <pose>-23.93 9.63 0 0 0 3.141591</pose>
+      <static>1</static>
+      <include>
+        <name>Desk with two chair</name>
+        <uri>model://table_n_twoChair</uri>
+      </include>
+    </model>
+
+    <model name="table_n_twoChair_16">
+      <pose>-26.92 11.95 0 0 0 3.141591</pose>
+      <static>1</static>
+      <include>
+        <name>Desk with two chair</name>
+        <uri>model://table_n_twoChair</uri>
+      </include>
+    </model>
+
+    <model name="table_n_twoChair_17">
+      <pose>-25.43 11.95 0 0 0 3.141591</pose>
+      <static>1</static>
+      <include>
+        <name>Desk with two chair</name>
+        <uri>model://table_n_twoChair</uri>
+      </include>
+    </model>
+
+    <model name="table_n_twoChair_18">
+      <pose>-23.93 11.95 0 0 0 3.141591</pose>
+      <static>1</static>
+      <include>
+        <name>Desk with two chair</name>
+        <uri>model://table_n_twoChair</uri>
+      </include>
+    </model>
+
+    <model name="table_n_twoChair_19">
+      <pose>-28.40 11.95 0 0 0 3.141591</pose>
+      <static>1</static>
+      <include>
+        <name>Desk with two chair</name>
+        <uri>model://table_n_twoChair</uri>
+      </include>
+    </model>
+
+    <!-- NEXT ROOM-->
+    <model name="long_table_1">
+      <pose>-22.16 21.71 0 0 0 0</pose>
+      <model name="Table_1">
+        <pose>0 0 0 0 0 0</pose>
+        <static>1</static>
+        <include>
+          <name>Table</name>
+          <uri>model://table</uri>
+        </include>
+      </model>
+
+      <model name="Table_2">
+        <pose>1.5 0 0 0 0 0</pose>
+        <static>1</static>
+        <include>
+          <name>Table</name>
+          <uri>model://table</uri>
+        </include>
+      </model>
+
+      <model name="Table_3">
+        <pose>3 0 0 0 0 0</pose>
+        <static>1</static>
+        <include>
+          <name>Table</name>
+          <uri>model://table</uri>
+        </include>
+      </model>
+
+      <model name="Chair_1">
+        <pose>0.75 -0.5 0 0 0 3.141593</pose>
+        <static>1</static>
+        <include>
+          <name>Chair</name>
+          <uri>model://chair</uri>
+        </include>
+      </model>
+
+      <model name="Chair_2">
+        <pose>2.25 -0.5 0 0 0 3.141593</pose>
+        <static>1</static>
+        <include>
+          <name>Chair</name>
+          <uri>model://chair</uri>
+        </include>
+      </model>
+
+      <model name="Chair_3">
+        <pose>3.5 -0.5 0 0 0 3.141593</pose>
+        <static>1</static>
+        <include>
+          <name>Chair</name>
+          <uri>model://chair</uri>
+        </include>
+      </model>
+    </model>
+
+    <model name="long_table_2">
+      <pose>-22.51 20.56 0 0 1.567288</pose>
+      <model name="Table_1">
+        <pose>0 0 0 0 0 1.567288</pose>
+        <static>1</static>
+        <include>
+          <name>Table</name>
+          <uri>model://table</uri>
+        </include>
+      </model>
+
+      <model name="Table_2">
+        <pose>0 -1.5 0 0 0 1.567288</pose>
+        <static>1</static>
+        <include>
+          <name>Table</name>
+          <uri>model://table</uri>
+        </include>
+      </model>
+
+      <model name="Chair_1">
+        <pose>0.5 0 0 0 0 -1.567288</pose>
+        <static>1</static>
+        <include>
+          <name>Chair</name>
+          <uri>model://chair</uri>
+        </include>
+      </model>
+
+      <model name="Chair_2">
+        <pose>0.5 -1.5 0 0 0 -1.567288</pose>
+        <static>1</static>
+        <include>
+          <name>Chair</name>
+          <uri>model://chair</uri>
+        </include>
+      </model>
+    </model>
+    <model name="desk_50">
+      <pose>-21.80 16.30 0 0 0 1.570792</pose>
+      <static>1</static>
+      <include>
+        <name>Desk_Right</name>
+        <uri>model://desk_right</uri>
+      </include>
+    </model>
+
+    <model name="desk_51">
+      <pose>-22.15 12.26 0 0 0 0</pose>
+      <static>1</static>
+      <include>
+        <name>Desk_Right</name>
+        <uri>model://desk_right</uri>
+      </include>
+    </model>
+
+    <model name="desk_52">
+      <pose>-22.15 8.94 0 0 0 0</pose>
+      <static>1</static>
+      <include>
+        <name>Desk_Right</name>
+        <uri>model://desk_right</uri>
+      </include>
+    </model>
+
+
+    <model name="desk_53">
+      <pose>-18.96 12.26 0 0 0 0</pose>
+      <static>1</static>
+      <include>
+        <name>Desk_Left</name>
+        <uri>model://desk_left</uri>
+      </include>
+    </model>
+
+    <model name="desk_54">
+      <pose>-18.96 8.94 0 0 0 0</pose>
+      <static>1</static>
+      <include>
+        <name>Desk_Left</name>
+        <uri>model://desk_left</uri>
+      </include>
+    </model>
+  </world>
+</sdf>
