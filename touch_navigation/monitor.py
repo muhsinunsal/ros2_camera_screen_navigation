@@ -36,8 +36,8 @@ class CameraMonitor(Node):
         self.pointCloud = PointCloud2()
         self.lastFoundPoint = Point()
 
-
     def camera_callback(self, msg: Image):
+        cv2.namedWindow('Image', cv2.WINDOW_NORMAL)
         # Configuring size of screen elements and scaling ratios
         self.rgb_camera_dimensions = [msg.width, msg.height]
         self.savedsceneObjects.width = self.rgb_camera_dimensions[0]
@@ -97,7 +97,7 @@ class CameraMonitor(Node):
             rclpy.logging.get_logger("OpenCV").warn(e)
 
         # cv2.imshow("Depth_Image", self.depth_image)
-        
+
     def pointCloud_callback(self, msg: PointCloud2):
         pointCloudData = pc2.read_points(
             msg, field_names=("x", "y", "z", "rgb"), reshape_organized_cloud=True)
@@ -107,6 +107,7 @@ class CameraMonitor(Node):
             lambda point: point['z'] != 100 and point['z'] > 0, pointCloudData)
 
         self.pointCloud = pointCloudData
+
 
 class TimedFunctionCache:
     '''Class for managing seen screen elements'''
@@ -170,6 +171,7 @@ class TimedFunctionCache:
                 timedfunc.run_()
 
         cv2.imshow("Image", image)
+
 
 def mousePoints(event, x, y, flags, params: CameraMonitor):
 
